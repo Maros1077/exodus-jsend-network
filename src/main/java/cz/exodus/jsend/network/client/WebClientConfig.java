@@ -36,7 +36,7 @@ public class WebClientConfig {
 
     private ExchangeFilterFunction logRequest() {
         return ExchangeFilterFunction.ofRequestProcessor(clientRequest -> {
-            log.info("Client request: {} {}", clientRequest.method(), clientRequest.url());
+            log.info("Client request: {} {} {} {}", clientRequest.method(), clientRequest.url(), clientRequest.headers(), clientRequest.attributes());
             return Mono.just(clientRequest);
         });
     }

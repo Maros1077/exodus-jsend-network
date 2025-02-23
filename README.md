@@ -75,7 +75,7 @@ public class MyClient extends BaseJSendClient {
     }
     
     public Result<IssueResponse, JSendClientException> issueToken(IssueRequest request) {
-        return executePostRequestSync(/test/v1/issue, request, IssueResponse.class);
+        return executePostRequestSync("/test/v1/issue", request, IssueResponse.class);
     }
 }
 
